@@ -2,6 +2,7 @@
 using LoginFlowInMauiBlazorApp.Data;
 using LoginFlowInMauiBlazorApp.Services;
 using LoginFlowInMauiBlazorApp.Services.HTTPService;
+using MudBlazor.Services;
 
 namespace LoginFlowInMauiBlazorApp;
 
@@ -25,7 +26,8 @@ public static class MauiProgram
 		builder.Services.AddScoped<IAppService, AppService>();
 		builder.Services.AddSingleton<WeatherForecastService>();
 		builder.Services.AddScoped<IHttpService, HttpService>();
+        builder.Services.AddMudServices();
 
-		return builder.Build();
+        return builder.Build();
 	}
 }
